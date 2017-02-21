@@ -1,0 +1,30 @@
+.ck-panel-content {
+    margin: 10px 0;
+    min-height: 60px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: linear-gradient(#ffbbdd, #f06292);
+    box-shadow: 2px 2px 4px 0px #999;
+
+    h2 {
+        margin-top: 0px;
+    }
+
+    &.light-cyan {
+        background: #aeebdf;
+        border-color: #aeebdf;
+        color: White;
+    }
+
+    &.peach {
+        background: #FFB9BB;
+        border-color: #FFB9BB;
+        color: #6c3f21;
+    }
+
+    &.pink {
+        background: #ff485b;
+        border-color: #ff485b;
+        color: #fff;
+    }
+}

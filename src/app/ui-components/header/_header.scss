@@ -1,0 +1,28 @@
+.ck-header-content {
+    color: #6c3f21;
+    h1 {
+        font-family: 'Kaushan Script';
+        font-size: 36px;
+        text-shadow: 2px 1px #ddd;
+    }
+
+    ul, 
+    li {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav > ul > li {
+        margin: 10px;
+
+        a,
+        a:hover,
+        a:link,
+        a:visited,
+        a:active {
+            text-decoration: none;
+            color: #333;
+        }
+    }
+}

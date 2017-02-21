@@ -1,0 +1,20 @@
+
+section .absolute-center {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section .loader {
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+
+    img {
+        width: 120px;
+    }
+}
+
+    
+     

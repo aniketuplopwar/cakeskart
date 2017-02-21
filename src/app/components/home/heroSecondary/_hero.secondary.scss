@@ -1,0 +1,55 @@
+.hero-home-secondary {
+    position: relative;
+    height: 350px;
+
+    .text-left {
+        padding-top: 110px; 
+        color: #6c3f21;
+        font-family: 'arsenal';
+        text-align: right;
+        text-shadow: 1px 1px #aaa;
+
+        h2 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+
+    .ovarlap-images {
+        position: relative;
+        height: 250px;
+        list-style: none;
+
+        li {
+            list-style: none;
+            display:inline-block;
+            position: absolute;
+        }
+
+        li:first-child {
+            right: 0;
+            top: -20px;
+            -ms-transform: rotate(10deg); /* IE 9 */
+            -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+            transform: rotate(10deg)
+
+            img {
+                height: auto;
+            }
+        }
+
+        li:last-child {
+            right: 35%;
+            top: 30%;
+            -ms-transform: rotate(-5deg); /* IE 9 */
+            -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+            transform: rotate(-5deg)
+        }
+    }
+}
+
+
