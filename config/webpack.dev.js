@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
@@ -7,7 +8,7 @@ const rootDir = path.resolve(__dirname, '..');
  
 module.exports = webpackMerge(commonConfig, {
  
-devtool: 'cheap-module-eval-source-map',
+devtool: 'source-map',
  
 output: {
     path: path.resolve(rootDir, 'public/javascripts/dist'),
@@ -17,6 +18,12 @@ output: {
     },
  
     plugins: [
+        new webpack.NoEmitOnErrorsPlugin(),
+        new webpack.optimize.UglifyJsPlugin({ // https://github.com/angular/angular/issues/10618
+        mangle: {
+            keep_fnames: true
+        }
+        }),
         new ExtractTextPlugin('[name].css')
     ],
  
