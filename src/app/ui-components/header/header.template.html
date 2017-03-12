@@ -2,14 +2,16 @@
     <header class="pull-left"> 
         <h1>CakesKart.com</h1>
     </header>
-    <nav class="pull-right hidden-xs">
+    <footer class="pull-right">
+        <nav class="hidden-xs">
 
-        <ul>
-            <li *ngFor="let link of links"> 
-               <a href="{{link.href}}"> {{link.label}}</a>
-            </li>
-        </ul>
-    </nav>
-    <footer>
+            <ul>
+                <li *ngFor="let link of links"> 
+                <a href="{{link.href}}"> {{link.label}}</a>
+                </li>
+            </ul>
+        </nav>
+    
+        <div class="pull-right">Call us to order: +91-779 867 8800</div>
     </footer>
 </section>
