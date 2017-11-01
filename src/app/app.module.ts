@@ -9,14 +9,31 @@ import { CKImage } from './ui-components/image/image.component';
 import { HomeHeroComponent } from './components/home/hero/hero.component';
 import { HeroSecondaryComponent } from './components/home/heroSecondary/hero.secondary.component';
 import { HeroBottomComponent } from './components/home/heroBottom/hero.bottom.component';
+import { RouterModule, Routes } from "@angular/router";
+import { AboutUsComponent } from "./layouts/aboutus/aboutus.component";
+import { BaseComponent} from "./layouts/base/base.component";
+
+const appRoutes: Routes = [
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    {path: 'home', component: HomePageComponent},
+    {path: 'aboutus', component:AboutUsComponent}
+];
+
+
 
 
 @NgModule({
     imports: [
-        BrowserModule
+        BrowserModule,
+        RouterModule.forRoot(
+            appRoutes,
+            { enableTracing: true } // <-- debugging purposes only
+        )
     ],
     declarations: [
         HomePageComponent,
+        BaseComponent,
+        AboutUsComponent,
         HeaderComponent,
         FooterComponent,
         PageLoader,
@@ -26,7 +43,7 @@ import { HeroBottomComponent } from './components/home/heroBottom/hero.bottom.co
         HeroSecondaryComponent,
         HeroBottomComponent
     ],
-    bootstrap: [ HomePageComponent ]
+    bootstrap: [ BaseComponent ]
 })
 export class AppModule {  
 }

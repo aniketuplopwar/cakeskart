@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "postinstall": "typings install"
+    "postinstall": "typings install",
+    "build": "node_modules/.bin/wepack",
+    "watch": "node_modules/.bin/webpack --watch",
+    "dev": "node_modules/.bin/nodemon ./server/server.js  --exec node_modules/.bin/babel-node --presets es2015"
   },
   "dependencies": {
     "@angular/common": "^2.4.8",
@@ -15,17 +18,20 @@
     "@angular/platform-browser": "^2.4.8",
     "@angular/platform-browser-dynamic": "^2.4.8",
     "@angular/router": "^3.4.8",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
     "core-js": "^2.4.1",
     "debug": "~2.6.0",
+    "ejs": "^2.5.6",
     "express": "~4.14.1",
     "morgan": "~1.7.0",
+    "nodemon": "^1.12.1",
     "pug": "~2.0.0-beta10",
     "rxjs": "^5.1.1",
     "serve-favicon": "~2.3.2",
-    "zone.js": "^0.7.7",
-    "ejs": "^2.5.6"
+    "zone.js": "^0.7.7"
   },
   "devDependencies": {
     "angular2-template-loader": "^0.6.0",
