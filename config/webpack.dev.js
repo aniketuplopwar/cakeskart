@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
+var CompressionPlugin = require('compression-webpack-plugin');
  
 const path = require('path');
 const rootDir = path.resolve(__dirname, '..');
@@ -24,7 +25,15 @@ output: {
             keep_fnames: true
         }
         }),
-        new ExtractTextPlugin('[name].css')
+        new ExtractTextPlugin('[name].css'),
+        new CompressionPlugin({
+            asset: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0
+        })
+
     ],
  
     devServer: {

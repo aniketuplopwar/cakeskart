@@ -4,8 +4,13 @@ import favicon from 'serve-favicon';
 import ServicesRoutes from './services/services.routes';
 import ViewRoutes from './view/view.routes';
 
-const app = express();
 
+const app = express();
+app.get('/*.js', function (req, res, next) {
+    req.url = req.url + '.gz';
+    res.set('Content-Encoding', 'gzip');
+    next();
+});
 app.use(favicon(path.join(__dirname, '../public/images/favicon.jpg')));
 app.use(express.static(path.join(__dirname, '../public')));
 
