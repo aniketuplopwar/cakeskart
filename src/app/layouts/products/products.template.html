@@ -1,0 +1,16 @@
+<ck-panel theme="">
+    <div class="products">
+        <div class="category-list">
+            <div class="category" *ngFor="let category of categories">
+                <a href='{{category.href}}'>
+                    <ck-image imgSrc='{{category.categoryImage}}'
+                              height="250" width="250">
+                    </ck-image>
+                    <p class="category-label">
+                        {{category.label}}
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+</ck-panel>

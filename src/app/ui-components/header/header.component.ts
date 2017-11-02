@@ -13,24 +13,24 @@ import {Component} from '@angular/core';
 export class HeaderComponent {
     links = [
         {
-            'href': '#home',
+            'href': 'home',
             'label': 'Home'
         },
         {
-            'href': '#products',
+            'href': 'products',
             'label': 'Products'
         },
         {
-            'href': '#locations',
+            'href': 'locations',
             'label': 'Locations'
         },
 
         {
-            'href': '#contactus',
+            'href': 'contactus',
             'label': 'Contact us'
         },
         {
-            'href': '#aboutus',
+            'href': 'aboutus',
             'label': 'About us'
         }
 

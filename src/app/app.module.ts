@@ -12,11 +12,13 @@ import { HeroBottomComponent } from './components/home/heroBottom/hero.bottom.co
 import { RouterModule, Routes } from "@angular/router";
 import { AboutUsComponent } from "./layouts/aboutus/aboutus.component";
 import { BaseComponent} from "./layouts/base/base.component";
+import { ProductsComponent} from "./layouts/products/products.component";
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     {path: 'home', component: HomePageComponent},
-    {path: 'aboutus', component:AboutUsComponent}
+    {path: 'aboutus', component:AboutUsComponent},
+    { path: 'products', component: ProductsComponent}
 ];
 
 
@@ -34,6 +36,7 @@ const appRoutes: Routes = [
         HomePageComponent,
         BaseComponent,
         AboutUsComponent,
+        ProductsComponent,
         HeaderComponent,
         FooterComponent,
         PageLoader,

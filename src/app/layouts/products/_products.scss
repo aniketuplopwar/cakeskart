@@ -1,0 +1,16 @@
+.category-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .category {
+    margin:20px;
+    text-align: center;
+  }
+
+}
